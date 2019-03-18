@@ -1,17 +1,23 @@
 <template>
     <div>
-        <book-detail :bookObj="bookHot[0]"/>
+        <search/>
+        <book-show-all :bookAll=bookHot>
+          <div slot="title" class="title">精选</div>
+        </book-show-all>
+        <!-- <book-detail :bookObj="bookHot[0]"/> -->
     </div>
 </template>
 
 <script>
 import GetMessage from 'model/getmessage.js'
-import BookDetail from 'components/BookDetail'
+import Search from 'components/Search'
+import BookShowAll from 'components/BookShowAll'
 const messageSource = new GetMessage()
 
 export default {
   components: {
-    BookDetail
+    Search,
+    BookShowAll
   },
   data () {
     return {
@@ -29,13 +35,15 @@ export default {
         })
       }
       this.bookHot = JSON.parse(localStorage.getItem('bookHot'))
-      console.log(this.bookHot[0])
-    //   console.log(this.bookHot)
+      // console.log(this.bookHot)
     }
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-
+.title
+  width 100%
+  text-align center
+  font-size .32rem
 </style>

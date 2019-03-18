@@ -22,4 +22,12 @@ export default class GetMessage extends Http {
     const url = baseUrl + '/book/hot_list'
     return this.getmessage(url)
   }
+  getBookDetail (id) {
+    const url = `${baseUrl}/book/${id}/detail`
+    return this.getmessage(url)
+  }
+  getBookShortComment (id) {
+    const url = `${baseUrl}/book/${id}/short_comment`
+    return this.getmessage(url)
+  }
 }

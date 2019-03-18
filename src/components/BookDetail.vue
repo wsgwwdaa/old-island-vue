@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div @click="clickBook" class="book-detail-container">
         <img :src="bookObj.image" alt="">
         <div class="text-container">
             <p class="title">{{bookObj.title}}</p>
@@ -25,11 +25,11 @@ export default {
   computed: {
   },
   mounted () {
-    console.log(this.bookObj)
+    // console.log(this.bookObj)
   },
   methods: {
-    clicked () {
-      console.log(this.bookDetail)
+    clickBook () {
+      this.$router.push({ name: 'bookinformation', params: { id: this.bookObj.id } })
     }
   }
 
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.container
+.book-detail-container
   position relative
   height 3.6rem
   width 2.4rem

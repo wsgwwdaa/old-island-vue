@@ -78,6 +78,8 @@ export default {
   width 100%
   position fixed
   bottom 0
+  background white
+  z-index 99
   .silver-line
     display block
     width 100%

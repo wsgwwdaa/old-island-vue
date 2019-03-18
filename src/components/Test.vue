@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div @click="clickTest">
         Test
     </div>
 </template>
@@ -9,6 +9,11 @@ export default {
   data () {
     return {
       a: 100
+    }
+  },
+  methods: {
+    clickTest () {
+      console.log(this.$router)
     }
   }
 }
