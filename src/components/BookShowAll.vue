@@ -30,7 +30,7 @@ export default {
 
 <style lang="stylus" scoped>
 .book-show-container>>>.book-detail-container
-  margin .36rem .16rem
+  margin .36rem .32rem
 .book-show-container
   display flex
   flex-direction row
